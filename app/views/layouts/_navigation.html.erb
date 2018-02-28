@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">EspiApp</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tortillería<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Panadería</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pizzas</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to("Salir #{UserDecorator.new(current_user).fullname}", destroy_user_session_path,
+                      method: :delete, class: "nav-link inline") %>
+        </li>
+        <% if current_user.role == "admin" %>
+          <li class="nav-item">
+            <%= link_to("Settings", "/admin", class: "nav-link inline") %>
+          </li>
+        <% end %>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to('Iniciar Sesión', new_user_session_path, class: "nav-link")  %>
+        </li>
+      <% end %>
+      </ul>
+    </span>
+  </div>
+</nav>

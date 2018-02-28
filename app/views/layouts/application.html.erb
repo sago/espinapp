@@ -3,12 +3,19 @@
   <head>
     <title>Espinapp</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= render "shared/bootstrap" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/navigation" %>
+    <div class="container container-fluid">
+      <%= yield %>
+    </div>
+    <footer>
+      <div class="container" style="background-color: #007bff!important;min-height: 60px;">&copy; Yerberito.io 2018</div>
+    </footer>
   </body>
 </html>
