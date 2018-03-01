@@ -1,19 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="vertical-center">
+  <div class="signInBox">
+    <div class="header">
+      <h4>Producto</h4>
+    </div>
+    <p>
+      <strong>Nombre del producto:</strong>
+      <%= @product.name %>
+    </p>
 
-<p>
-  <strong>Price unit:</strong>
-  <%= @product.price_unit %>
-</p>
+    <p>
+      <strong>Precio por unidad:</strong>
+      <%= @product.price_unit %>
+    </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @product.type %>
-</p>
+    <p>
+      <strong>Tipo de Negocio:</strong>
+      <%= @product.product_type %>
+    </p>
+  </div>
+</div>
+
+
+
+<%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>
+<div></div>
+<br>
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

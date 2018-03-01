@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
-        format.html { redirect_to "/admin" }
+        format.html { redirect_to "/admin", notice: 'El Usuario fue creado!' }
         format.json { render :show, status: :created, location: @story }
       else
         format.html { redirect_to new_user_path }
@@ -26,17 +26,22 @@ class UsersController < ApplicationController
 
   def update
     respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to "/admin" }
+      if @user.update(user_params_edit)
+        format.html { redirect_to "/admin", notice: 'El Usuario fue actualizado!' }
         format.json { render :show, status: :created, location: @story }
       else
         format.html { redirect_to edit_user_path(@user) }
-        format.json { render json: @story.errors, status: :unprocessable_entity }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to "/admin", notice: 'El Usuario fue borrado!' }
+      format.json { head :no_content }
+    end
   end
 
   private
@@ -45,9 +50,13 @@ class UsersController < ApplicationController
       @user = User.find params[:id]
     end
 
+    def user_params_edit
+      params.require(:user).permit(:full_name, :last_name, :password, :email, :role)
+    end
+
     def user_params
-      params[:user] = {"first_name"=>params[:first_name], "last_name"=>params[:last_name], "email"=>params[:email],
+      params[:user] = {"full_name"=>params[:full_name], "last_name"=>params[:last_name], "email"=>params[:email],
                       "password"=>params[:password], "role"=> params[:role]}
-      params.require(:user).permit(:first_name, :last_name, :password, :email, :role)
+      params.require(:user).permit(:full_name, :last_name, :password, :email, :role)
     end
 end

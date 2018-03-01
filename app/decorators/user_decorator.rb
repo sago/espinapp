@@ -1,7 +1,7 @@
 class UserDecorator < SimpleDelegator
 
   def fullname
-    "#{first_name} #{last_name}"
+    "#{full_name}"
   end
 
 end

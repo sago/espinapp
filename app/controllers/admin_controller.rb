@@ -4,6 +4,8 @@ class AdminController < ApplicationController
 
   def index
     @users = User.all
+    @products = Product.all
+    @clients = Client.all
   end
 
   private

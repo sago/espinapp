@@ -1,29 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Full name:</strong>
-  <%= @client.full_name %>
-</p>
+<div class="vertical-center">
+  <div class="signInBox">
+    <div class="header">
+      <h4>Cliente</h4>
+    </div>
+    <p>
+      <strong>Nombre:</strong>
+      <%= @client.full_name %>
+    </p>
 
-<p>
-  <strong>Business:</strong>
-  <%= @client.business %>
-</p>
+    <p>
+      <strong>Nombre del Negocio:</strong>
+      <%= @client.business %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @client.address %>
-</p>
+    <p>
+      <strong>Dirección:</strong>
+      <%= @client.address %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @client.phone %>
-</p>
+    <p>
+      <strong>Teléfono:</strong>
+      <%= @client.phone %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @client.email %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @client.email %>
+    </p>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+
+
+<%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>
+<div></div>
+<br>
+

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="vertical-center">
+  <div class="signInBox">
+    <div class="header">
+      <h4>Usuario</h4>
+    </div>
+    <p>
+      <strong>Nombre:</strong>
+      <%= UserDecorator.new(@user).fullname %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+
+    <p>
+      <strong>Rol:</strong>
+      <%= @user.role %>
+    </p>
+  </div>
+</div>
+
+
+
+<%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>
+<div></div>
+<br>

@@ -1,6 +1,16 @@
 <br>
-<div class="container">
-  <h4>Aquí comienza la App</h4>
+<div class="container" style="background-color: #ffffff;">
   <br>
-  <div class="btn btn-info">Venta</div>
+  <div class="container" id="orderByDay">
+    <h3>Listado de Ventas de día de hoy</h3>
+  </div>
+  <div class="container">
+    <% if @orders.present? %>
+      <%= render "orders/index" %>
+    <% end %>
+  </div>
+  <br>
+  <%= link_to "Pedido Nuevo", new_order_path, class: "btn btn-primary"%>
+  <div></div>
+  <br>
 </div>

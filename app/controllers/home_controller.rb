@@ -2,6 +2,9 @@ class HomeController < ApplicationController
   before_action :authenticate_user!
   before_action :check_role
   def index
+    if @role == "admin"
+      @orders = Order.where(created_at: Date.today)
+    end
   end
 
   private
