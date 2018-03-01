@@ -1,6 +1,12 @@
-<h1>Editing Product</h1>
+<div class="vertical-center">
+  <div class="signInBox">
+    <div class="header">
+      <h4>Editar Producto</h4>
+    </div>
+    <%= render 'form', product: @product %>
+  </div>
 
-<%= render 'form', product: @product %>
-
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+</div>
+<%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>
+<div></div>
+<br>

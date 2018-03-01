@@ -1,5 +1,14 @@
-<h1>New Product</h1>
+<div class="vertical-center">
+  <div class="signInBox">
+    <div class="header">
+      <h4>Agregar Producto</h4>
+    </div>
+    <%= render 'form', product: @product %>
+  </div>
+</div>
 
-<%= render 'form', product: @product %>
 
-<%= link_to 'Back', products_path %>
+
+<%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>
+<div></div>
+<br>

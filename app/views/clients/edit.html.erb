@@ -1,6 +1,13 @@
-<h1>Editing Client</h1>
+<div class="vertical-center">
+  <div class="signInBox">
+    <div class="header">
+      <h4>Editar Cliente</h4>
+    </div>
+    <%= render 'form', client: @client %>
+  </div>
 
-<%= render 'form', client: @client %>
+</div>
+<%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>
+<div></div>
+<br>
 
-<%= link_to 'Show', @client %> |
-<%= link_to 'Back', clients_path %>

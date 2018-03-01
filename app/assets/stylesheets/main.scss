@@ -2,6 +2,13 @@ body {
   background-color: #fd7322bd;
   margin: 0 !important;
 }
+a:visited {
+  color: #ffffff;
+}
+a:hover {
+  background-color: #007bff!important;
+  font-weight: bold;
+}
 .inline {
   display: inline-block;
 }
@@ -15,13 +22,33 @@ div.container-fluid {
   background-position: center center;
 }
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {  }
+@media (min-width: 576px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
+@media (min-width: 768px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
+@media (min-width: 992px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }

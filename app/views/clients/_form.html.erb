@@ -12,31 +12,31 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :full_name %>
+    <%= form.label "Nombre completo:" %>
     <%= form.text_field :full_name, id: :client_full_name %>
   </div>
 
   <div class="field">
-    <%= form.label :business %>
+    <%= form.label "Negocio:" %>
     <%= form.text_field :business, id: :client_business %>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
+    <%= form.label "Dirección" %>
     <%= form.text_field :address, id: :client_address %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <%= form.label "Teléfono" %>
     <%= form.text_field :phone, id: :client_phone %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :client_email %>
+    <%= form.label "Email:" %>
+    <%= form.email_field :email, id: :client_email %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", class: "btn btn-sm btn-info" %>
   </div>
 <% end %>
