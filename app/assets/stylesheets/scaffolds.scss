@@ -82,3 +82,114 @@ div {
 label {
   display: block;
 }
+
+// Devise Customs
+// Extra large devices (large desktops, 1200px and up)
+.header {
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .signInBox {
+    min-width: 480px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    form {
+      width: 90%;
+      padding-left: 8%;
+    }
+  }
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .signInBox {
+    min-width: 480px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    form {
+      width: 90%;
+      padding-left: 8%;
+    }
+  }
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+  .signInBox {
+    width: 80%;
+    max-width: 480px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    form {
+      width: 90%;
+      padding-left: 8%;
+    }
+  }
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .signInBox {
+    width: 100%;
+    max-width: 380px;
+    padding: 15px 15px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    form {
+      width: 90%;
+      padding-left: 8%;
+    }
+  }
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    align-items: center;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .signInBox {
+    width: 100%;
+    max-width: 380px;
+    padding: 15px 15px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    form {
+      width: 90%;
+      padding-left: 8%;
+    }
+  }
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    align-items: center;
+  }
+}

@@ -14,6 +14,54 @@
  *= require_self
  */
 
- @import "home";
- @import "main";
- @import "devise";
+body {
+  background-color: #fd7322bd;
+  margin: 0 !important;
+}
+a:visited {
+  color: #ffffff;
+}
+a:hover {
+  background-color: #007bff!important;
+  font-weight: bold;
+}
+.inline {
+  display: inline-block;
+}
+.no-image {
+  background-color: #ffffff;
+}
+div.container-fluid {
+  background-image: url("tortillas.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+@media (min-width: 576px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
+
+@media (min-width: 768px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
+
+@media (min-width: 992px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
+
+@media (min-width: 1200px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
