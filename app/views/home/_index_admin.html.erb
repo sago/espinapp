@@ -2,15 +2,12 @@
 <div class="container" style="background-color: #ffffff;">
   <br>
   <div class="container" id="orderByDay">
-    <h3>Listado de Ventas de día de hoy</h3>
+
+    <%= render "orders/order_container" %>
+
   </div>
-  <div class="container">
-    <% if @orders.present? %>
-      <%= render "orders/index" %>
-    <% end %>
-  </div>
-  <br>
   <%= link_to "Pedido Nuevo", new_order_path, class: "btn btn-primary"%>
   <div></div>
   <br>
 </div>
+

@@ -11,4 +11,9 @@ module ApplicationHelper
   def get_products
     Product.all.pluck(:name, :id)
   end
+
+  def get_product_name(product_id)
+    name = Product.find product_id
+    name.name
+  end
 end

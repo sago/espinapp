@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -59,6 +59,11 @@ class OrdersController < ApplicationController
       format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def date_filter
+    @date = params[:date].present? ? params[:date].to_date : Date.today
+    @orders = Order.where("created_at >=  :start_date AND created_at <= :end_date", start_date:  @date.beginning_of_day.utc, end_date: @date.end_of_day.utc)
   end
 
   private

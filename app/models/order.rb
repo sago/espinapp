@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  has_one   :client
-  has_one   :user
-  has_many  :products
+  belongs_to   :client
+  belongs_to   :user
+  has_many     :products
 end

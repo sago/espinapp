@@ -9,14 +9,14 @@ Rails.application.routes.draw do
     get   "/users/new",           to: "users#new",        as: "new_user"
     get   "users/:id/edit",       to: "users#edit",       as: "edit_user"
     get   "users/:id",            to: "users#show",       as: "user"
-    patch "users/:id",             to: "users#update"
+    patch "users/:id",            to: "users#update"
     put   "users/:id",            to: "users#update"
     delete "users/:id",           to: "users#destroy"
   end
 
   # Custom routes
   get   "/admin",               to: "admin#index"
-
+  post  "/date_filter",         to: "orders#date_filter"
   # root
   root "home#index"
 
