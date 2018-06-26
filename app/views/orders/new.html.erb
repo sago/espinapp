@@ -1,11 +1,36 @@
 <div class="vertical-center-sm">
-  <div class="signInBox">
-    <div class="header">
-      <h4>Levantar Pedido</h4>
-    </div>
-    <%= render 'form', order: @order %>
+  <div class="col-sm-12 col-lg-6">
+    <div class="card mt-3 mb-3">
+      <div class="card-header">
+        <h4>Levantar Pedido</h4>
+      </div>
+      <div class="card-body">
+        <%= render 'form', order: @order %>
+      </div>
+      <div class="card-footer">
+        <%= link_to 'Regresar', root_path, class: "btn btn-sm btn-info" %>
+      </div>    
   </div>
+  </div>  
 </div>
-<%= link_to 'Regresar', root_path, class: "btn btn-sm btn-info" %>
-  <div></div>
-  <br>
+
+<script>
+  $("#select-product").on("change", function() {    
+    var product_id = $("#select-product").val();
+    var request = $.ajax({
+      type: 'GET',
+      url:  '/get_product_price',
+      data: { product_id: product_id },
+      dataType: 'JSON'
+    });
+    request.done(function (response) {
+      $("#product-price").val(response.price);
+    });
+  });
+  $("#order_quantity").on("change", function(){    
+    var qtty = Number($(this).val());
+    var price = Number($("#product-price").val());
+    $("#order_total").val(qtty*price);
+  });
+
+</script>

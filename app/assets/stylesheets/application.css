@@ -15,14 +15,14 @@
  */
 
 body {
-  background-color: #fd7322bd;
+  background-color: #2f57867a;
   margin: 0 !important;
 }
 a:visited {
   color: #ffffff;
 }
 a:hover {
-  background-color: #007bff!important;
+  background-color: #fffafa00;
   font-weight: bold;
 }
 .inline {
@@ -32,10 +32,7 @@ a:hover {
   background-color: #ffffff;
 }
 div.container-fluid {
-  background-image: url("tortillas.jpg");
-  background-size:     cover;                      /* <------ */
-  background-repeat:   no-repeat;
-  background-position: center center;
+  background-color: #f3955a;
 }
 
 @media (min-width: 576px) {

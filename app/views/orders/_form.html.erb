@@ -1,49 +1,52 @@
 <div class="row">
-<%= form_with(model: order, local: true) do |form| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+  <div class="col-sm-12 col-lg-12">
+    <%= form_with(model: order, local: true) do |form| %>
+      <% if order.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>    
 
-      <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+          <% order.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>   
 
-  <div class="field">
-    <%= form.label "Cliente" %>
-    <%= form.select :client_id, get_clients, { include_blank: "Select..." }, { class: "form-control col-12" } %>
+      <div class="field">
+        <%= form.label "Cliente" %>
+        <%= form.select :client_id, get_clients, { include_blank: "Select..." }, { class: "form-control col-12" } %>
+      </div>    
+
+      <div class="field">
+        <%= form.label "Repartidor" %>
+        <%= form.select :user_id, get_repartidor, { include_blank: "Select..." }, { class: "form-control col-12" } %>
+      </div>    
+
+      <div class="field">
+        <%= form.label "Producto" %>
+        <%= form.select :product_id, get_products, { include_blank: "Select..." }, { class: "form-control col-12", id: "select-product" } %>
+      </div>
+        <%= hidden_field_tag 'product-price' %>
+      <div class="field">
+        <%= form.label "Cantidad" %>
+        <%= form.number_field :quantity, id: :order_quantity, class: "form-control col-12" %>
+      </div>    
+
+      <div class="field">
+        <%= form.label "Abono" %>
+        <%= form.number_field :payment, id: :order_payment, class: "form-control col-12" %>
+      </div>    
+
+      <div class="field">
+        <%= form.label "Total" %>
+        <%= form.text_field :total, id: :order_total, class: "form-control col-12" %>
+      </div>    
+
+      <div class="actions">
+        <%= form.submit "Guardar", class: "btn btn-sm btn-primary form-control col-12" %>
+      </div>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= form.label "Repartidor" %>
-    <%= form.select :user_id, get_repartidor, { include_blank: "Select..." }, { class: "form-control col-12" } %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Producto" %>
-    <%= form.select :product_id, get_products, { include_blank: "Select..." }, { class: "form-control col-12" } %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Cantidad" %>
-    <%= form.number_field :quantity, id: :order_quantity, class: "form-control col-12" %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Abono" %>
-    <%= form.number_field :payment, id: :order_payment, class: "form-control col-12" %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Total" %>
-    <%= form.text_field :total, id: :order_total, class: "form-control col-12" %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "Guardar", class: "btn btn-sm btn-primary form-control col-12" %>
-  </div>
-<% end %>
 </div>

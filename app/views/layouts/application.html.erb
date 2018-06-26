@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= render "shared/bootstrap" %>
+    <%= render "shared/datatables" %>
+    <%= render "shared/fonts" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -15,7 +17,7 @@
       <%= yield %>
     </div>
     <footer>
-      <div class="container" style="background-color: #007bff!important;min-height: 60px;">&copy; Yerberito.io 2018</div>
+      <div style="background-color: #2e5886;min-height: 60px;color:#fff;">&copy; pitayapps.io 2018</div>
     </footer>
   </body>
 </html>

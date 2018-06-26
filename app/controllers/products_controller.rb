@@ -61,6 +61,15 @@ class ProductsController < ApplicationController
     end
   end
 
+  def get_product_price    
+    product = Product.find params[:product_id]
+    respond_to do |format|
+      unless !product.price_unit.present?      
+        format.json { render json: { price: product.price_unit } }      
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
