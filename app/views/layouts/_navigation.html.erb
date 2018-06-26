@@ -1,5 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="/">EspiApp</a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#2e5886;font-family: 'Architects Daughter', cursive;">
+  <a class="navbar-brand app-title" href="/">
+    <img src="/assets/home.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    EspiApp
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,15 +12,19 @@
     <span class="navbar-text">
       <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to("Salir #{UserDecorator.new(current_user).fullname}", destroy_user_session_path,
-                      method: :delete, class: "nav-link inline") %>
-        </li>
-        <% if current_user.role == "admin" %>
+        <% if current_user.role == "Admin" %>
+          <li class="nav-item">
+            <%= link_to("Reportes", "#", class: "nav-link inline") %>
+          </li>
           <li class="nav-item">
             <%= link_to("Settings", "/admin", class: "nav-link inline") %>
           </li>
         <% end %>
+        <li class="nav-item">
+          <%= link_to("Salir #{UserDecorator.new(current_user).fullname}", destroy_user_session_path,
+                      method: :delete, class: "nav-link inline") %>
+        </li>
+        
       <% else %>
         <li class="nav-item">
           <%= link_to('Iniciar Sesión', new_user_session_path, class: "nav-link")  %>

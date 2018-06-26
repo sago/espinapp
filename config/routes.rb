@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   # Custom routes
   get   "/admin",               to: "admin#index"
+  get   "/get_product_price",   to: "products#get_product_price"
 
   # root
   root "home#index"

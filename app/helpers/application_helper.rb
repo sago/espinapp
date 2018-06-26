@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def get_repartidor
-    User.where(role: "repartidor").pluck(:full_name, :id)
+    User.all.pluck(:full_name, :id)
   end
 
   def get_products
