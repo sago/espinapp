@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   # Custom routes
   get   "/admin",               to: "admin#index"
+  get   "/reports",             to: "admin#reports"
+  get   "/resource_datatable",  to: "admin#resource_datatable"
   get   "/get_product_price",   to: "products#get_product_price"
 
   # root

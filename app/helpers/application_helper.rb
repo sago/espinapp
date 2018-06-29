@@ -5,10 +5,22 @@ module ApplicationHelper
   end
 
   def get_repartidor
-    User.all.pluck(:full_name, :id)
+    check_role
+    if @role == "admin"
+      User.all.pluck(:full_name, :id)
+    else
+      [ [ current_user.full_name, current_user.id ]]
+    end
+    
   end
 
   def get_products
     Product.all.pluck(:name, :id)
   end
+
+  private
+  def check_role
+    @role = user_signed_in? ? current_user.role.downcase : nil
+  end
+
 end

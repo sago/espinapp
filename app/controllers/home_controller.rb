@@ -4,6 +4,8 @@ class HomeController < ApplicationController
   def index
     if @role == "admin"
       @orders = Order.where(created_at: Date.today.all_day)
+    else
+      @orders = Order.where(user_id: current_user, created_at: Date.today.all_day)
     end    
   end
 

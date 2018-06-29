@@ -1,0 +1,16 @@
+var option = "<%= @option %>";
+switch(option) {
+    case "productos":
+        var partial = "<%= escape_javascript( render 'productos_datatable', locals: { resource: @resource } ) %>";
+        break;
+    case "pedidos":
+        var partial = "<%= escape_javascript( render 'pedidos_datatable', locals: { resource: @resource } ) %>";
+        break;
+    case "clientes":
+        var partial = "<%= escape_javascript( render 'clientes_datatable', locals: { resource: @resource } ) %>";
+        break;
+    default:
+        var partial = "<%= escape_javascript( render 'pedidos_datatable', locals: { resource: @resource } ) %>";
+        break;
+}
+$("#"+ option).html(partial);

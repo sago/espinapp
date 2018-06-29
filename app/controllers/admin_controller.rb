@@ -3,9 +3,32 @@ class AdminController < ApplicationController
   before_action :check_role
 
   def index
-    @users = User.all
-    @products = Product.all
-    @clients = Client.all
+    if @role == "admin"
+      @users = User.all
+      @products = Product.all
+      @clients = Client.all
+    else
+      redirect_to root_path
+    end
+  end
+
+  def reports
+    if @role == "admin"
+      @users = User.all
+      @products = Product.all
+      @clients = Client.all
+    else
+      redirect_to root_path
+    end
+  end
+
+  def resource_datatable
+    @option = params[:tab]
+    @resource = Order.all    
+    respond_to do |format|
+      format.js
+    end
+
   end
 
   private
