@@ -1,12 +1,14 @@
 <div class="vertical-center">
-  <div class="signInBox">
-    <div class="header">
+  <div class="signInBox card">
+    <div class="header card-header">
       <h4>Agregar Usuario</h4>
     </div>
-    <%= render "form_new" %>
-  </div>
-  <%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>
-  <div></div>
-  <br>
-</div>
+    <div class="card-body">
+      <%= render "form_new" %>
+    </div>
 
+  </div>
+  <div class="card-footer">
+      <%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>    
+  </div>
+</div>

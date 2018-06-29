@@ -1,6 +1,38 @@
 <br>
-<div class="container">
-  <h4>Ventas/Pedidos</h4>
-  <br>
-  <div class="btn btn-info">Venta</div>
+<div class="container">  
+  <% if @orders.present? %>
+    <div class="row">
+      <div class="col-sm-12">
+        <h5>Pedido de hoy <%= @orders.count %></h5>
+      </div>
+      <table class="col-sm-12 table">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Producto/Cant.</th>
+            <th>Total</th>
+          <tr>
+        </thead>
+        <tbody>
+          <% @orders.each do |order| %>
+            <tr>
+              <td><%= order.client.full_name %></td>
+              <td><%= get_product_name(order.product_id) %>/<%= order.quantity %></td>
+              <td><%= number_to_currency(order.total) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+        <tfooter>
+          <tr>
+            <th>Cliente</th>
+            <th>Producto/Cant.</th>
+            <th>Total</th>
+          <tr>
+        </tfooter>
+      </table>
+    </div>
+  <% end %>
+  <br />
+  <%= link_to "Pedido Nuevo", new_order_path, class: "btn btn-info"%>
+  <br /><br />
 </div>

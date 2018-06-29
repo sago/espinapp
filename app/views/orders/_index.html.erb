@@ -45,10 +45,11 @@
 <script>
 $(document).ready( function () {
     $('#orders').DataTable({
-        dom: 'Bfrtip',
+        dom: 'Blfrtlip',
         buttons: [
             'copy', 'excel', 'print'
-        ]
+        ],
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
     });
 } );
 </script>

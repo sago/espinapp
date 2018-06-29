@@ -1,14 +1,13 @@
 <div class="vertical-center">
-  <div class="signInBox">
-    <div class="header">
+  <div class="signInBox card">
+    <div class="header card-header">
       <h4>Agregar Producto</h4>
     </div>
-    <%= render 'form', product: @product %>
+    <div class="card-body">
+      <%= render 'form', product: @product %>
+    </div>
+    <div class="card-footer">
+      <%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>    
+    </div>
   </div>
 </div>
-
-
-
-<%= link_to 'Regresa a Settings', admin_path, class: "btn btn-sm btn-info" %>
-<div></div>
-<br>
