@@ -1,0 +1,289 @@
+/* line 1, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 48, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+.app-title {
+  line-height: initial;
+}
+
+/* line 52, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 56, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 62, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 69, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 79, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 85, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+
+/* line 91, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+.header {
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  /* line 95, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox {
+    background-color: #2f5786;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #fff;
+    margin: 0 auto;
+  }
+  /* line 101, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox form {
+    width: 100%;
+  }
+  /* line 104, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox .btn-sign {
+    color: #fff;
+    background-color: #f3945a;
+    border-color: #007bff;
+  }
+
+  /* line 110, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 85vh;
+    /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 119, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox {
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 123, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox form {
+    width: 90%;
+    padding-left: 8%;
+  }
+
+  /* line 128, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 137, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox {
+    width: 80%;
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 143, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox form {
+    width: 90%;
+    padding-left: 8%;
+  }
+
+  /* line 148, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  /* line 157, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 163, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox form {
+    width: 90%;
+    padding-left: 8%;
+  }
+
+  /* line 168, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  /* line 176, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 182, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .signInBox form {
+    width: 90%;
+    padding-left: 8%;
+  }
+
+  /* line 187, /Users/saulgomez/Proyectos/espinapp/app/assets/stylesheets/scaffolds.scss */
+  .vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    /* These two lines are counted as one :-)       */
+    align-items: center;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+body {
+  background-color: #2f57867a;
+  margin: 0 !important;
+}
+a:visited {
+  color: #ffffff;
+}
+a:hover {
+  background-color: #fffafa00;
+  font-weight: bold;
+}
+.inline {
+  display: inline-block;
+}
+.no-image {
+  background-color: #ffffff;
+}
+div.container-fluid {
+  background-color: #f3955a;
+}
+
+@media (min-width: 576px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
+
+@media (min-width: 768px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
+
+@media (min-width: 992px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
+
+@media (min-width: 1200px) {
+  .vertical-center-sm {
+    display: flex;
+    align-items: center;
+  }
+ }
